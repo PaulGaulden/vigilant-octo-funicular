@@ -1,0 +1,20 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "node Commands/deploy_command.js && node index.js",
+    "test": "npm run deploy",
+    "pm2-init": "pm2 start index.js --name discord-bot",
+    "pm2-start": "pm2 start discord-bot",
+    "pm2-stop": "pm2 stop discord-bot",
+    "pm2-restart": "pm2 restart discord-bot",
+    "pm2-status": "pm2 status"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "pm2": "^5.4.0",
+    "validator": "^13.12.0"
+  }
+}
